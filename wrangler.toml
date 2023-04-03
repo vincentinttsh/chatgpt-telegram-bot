@@ -1,0 +1,23 @@
+name = "chatgpt-telegram-bot"
+main = "src/index.js"
+compatibility_date = "2023-04-03"
+
+[vars]
+
+# MAX_TOKENS is the maximum number of tokens that can be generated in a single request
+# GPT-3.5-turbo: 4096
+# GPT-4: 8192
+OPENAI_MAX_TOKENS = 4096
+# support model: gpt-3.5-turbo, gpt-4
+OPENAI_MODEL = "gpt-3.5-turbo"
+# Show cost in response
+SHOW_COST = "false"
+# Show debug info in response
+SHOW_DEBUG_INFO = "false"
+
+# The necessary secrets are:
+# - TG_API_KEY
+# - TG_WEBHOOK_SECRET
+# - OPENAI_API_KEY
+# - ALLOWED_USERS (comma-separated list of user IDs, ID can be found in the logs)
+# Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
